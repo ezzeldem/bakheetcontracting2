@@ -1,3 +1,8 @@
+// rtl font
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;500;600;700;800;900&display=swap");
+// ltr font
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
 p,
 ul,
 h1,
@@ -23,8 +28,11 @@ ul {
 body {
   margin: 0;
   padding: 0;
-  // @include dir(rtl) {
-  // }
-  // @include dir(ltr) {
-  // }
+  counter-reset: nav-list-counter;
+  @include dir(rtl) {
+    font-family: "Vazirmatn", sans-serif;
+  }
+  @include dir(ltr) {
+    font-family: "Nunito", sans-serif;
+  }
 }

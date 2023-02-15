@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+.overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+
 p,
 ul,
 h1,
@@ -24,12 +34,270 @@ ul {
 body {
   margin: 0;
   padding: 0;
+  counter-reset: nav-list-counter;
+}
+html[dir=rtl] body {
+  font-family: "Vazirmatn", sans-serif;
+}
+html[dir=ltr] body {
+  font-family: "Nunito", sans-serif;
 }
 
-.overlay {
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.26);
-  position: fixed;
-  z-index: 99;
+.nav-section {
+  z-index: 5;
+  padding: 30px 0;
+  background-color: transparent;
+  z-index: 999999;
+  position: relative;
+}
+.nav-section .nav-box {
+  z-index: 99999999;
+}
+.nav-section .nav-box > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html[dir=ltr] .nav-section .nav-box > ul > li {
+  margin-right: 30px;
+}
+html[dir=rtl] .nav-section .nav-box > ul > li {
+  margin-left: 30px;
+}
+.nav-section .nav-box > ul > li:last-of-type {
+  margin: 0 !important;
+}
+.nav-section .nav-box > ul > li > a {
+  text-transform: uppercase;
+  padding: 8px 0;
+  font-weight: 600;
+  position: relative;
+  color: #000;
+  z-index: 999;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+.nav-section .nav-box > ul > li > a:hover {
+  color: #0081c9;
+  border-bottom-color: #0081c9;
+}
+.nav-section .nav-box > ul > li > a.active {
+  border-bottom-color: #0081c9;
+  border-top-color: #0081c9;
+}
+.nav-section .nav-box > ul > li .child-box {
+  position: absolute;
+  background-color: #e3e5ea;
+  left: 0;
+  right: 0;
+  top: 120px;
+  padding: 24px 0;
+  box-shadow: 0px 0px 20px 0px rgba(134, 229, 255, 0.1);
   display: none;
+}
+.nav-section .nav-box > ul > li .child-box .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #0081c9;
+  padding: 0 0 14px;
+}
+.nav-section .nav-box > ul > li .child-box .prag {
+  margin-bottom: 14px;
+  width: 90%;
+  line-height: 1.45;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+.nav-section .nav-box > ul > li .child-box .nav-link-list {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5bc0f8;
+}
+.nav-section .nav-box > ul > li .child-box .child-nav-list li a {
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #666;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.nav-section .nav-box > ul > li .child-box .child-nav-list li a:hover {
+  color: #0081c9;
+}
+.nav-section .icon-box-container {
+  display: flex;
+  align-items: center;
+}
+.nav-section .icon-box-container .icon-box {
+  text-align: end;
+  cursor: pointer;
+  padding: 0 10px;
+}
+html[dir=ltr] .nav-section .icon-box-container .icon-box {
+  margin-left: auto;
+  border-left: 1px solid #666;
+}
+html[dir=rtl] .nav-section .icon-box-container .icon-box {
+  margin-right: auto;
+  border-right: 1px solid #666;
+}
+.nav-section .icon-box-container .icon-box:first-of-type {
+  border: 0 !important;
+}
+.nav-section .icon-box-container .icon-box,
+.nav-section .icon-box-container .icon-box a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+.nav-section .icon-box-container .icon-box.menu-icon {
+  display: none;
+}
+.nav-section .search-box {
+  position: absolute;
+  background-color: #e3e5ea;
+  left: 0;
+  right: 0;
+  top: 120px;
+  padding: 24px 0;
+  box-shadow: 0px 0px 20px 0px rgba(134, 229, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+.nav-section .search-box form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-section .search-box form input {
+  width: 400px;
+  max-width: 100%;
+  padding: 12px;
+}
+.nav-section .search-box form input:focus {
+  outline: transparent;
+  box-shadow: unset;
+}
+.nav-section .search-box form button {
+  font-size: 18px;
+  border: 0;
+  padding: 12px 18px;
+  color: white;
+  background-color: #0081c9;
+}
+
+.intro-section {
+  overflow: hidden;
+  position: relative;
+}
+.intro-section .intro-slider {
+  height: 80vh;
+}
+.intro-section .intro-slider .swiper-wrapper {
+  height: 100%;
+  transition-duration: 0ms;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide {
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .slide-bgimg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .slide-bgimg img {
+  display: none;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .title {
+  font-size: 53px;
+  line-height: 60px;
+  color: white;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .prag {
+  color: white;
+  font-size: 17px;
+  line-height: 24px;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.intro-section .intro-slider .swiper-navigation-box {
+  position: absolute;
+  top: 50%;
+}
+.intro-section .swiper-pagination {
+  bottom: 127px;
+  position: absolute;
+  left: 55px;
+  width: 0;
+}
+.intro-section .swiper-pagination span {
+  color: #fff;
+}
+.intro-section .swiper-pagination span.swiper-pagination-current {
+  font-size: 27px;
+  position: absolute;
+  top: 10px;
+  font-weight: 600;
+}
+.intro-section .swiper-pagination span.swiper-pagination-line {
+  position: absolute;
+  width: 1px;
+  height: 85px;
+  top: 15px;
+  left: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: rotateZ(38deg);
+}
+.intro-section .swiper-pagination span.swiper-pagination-total {
+  font-size: 14px;
+  position: absolute;
+  top: 70px;
+  left: 30px;
+}
+.intro-section .arrow-box {
+  position: absolute;
+  right: 43px;
+  top: 43%;
+}
+.intro-section .arrow-box .swiper-button-next,
+.intro-section .arrow-box .swiper-button-prev {
+  left: unset;
+  color: #fff;
+}
+.intro-section .arrow-box .swiper-button-next:after,
+.intro-section .arrow-box .swiper-button-prev:after {
+  display: none;
+}
+.intro-section .arrow-box .swiper-button-next {
+  top: 39px;
+}
+.intro-section .arrow-box .swiper-button-prev {
+  top: 38%;
+  right: 80px;
+}
+
+.nav-section {
+  transition: 0.2s all ease-in-out;
 }
