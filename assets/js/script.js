@@ -12,6 +12,7 @@ $(document).ready(function () {
   ) {
     e.preventDefault();
     $(".nav-section .search-box").show();
+    $(".child-box").hide();
   });
   $(" .nav-section .nav-box > ul > li").click(function (e) {
     e.preventDefault();
@@ -21,4 +22,23 @@ $(document).ready(function () {
     $(this).siblings("li").children(".child-box").hide();
     $(this).siblings("li").children("a").removeClass("active");
   });
+
+  // mobile menu
+
+  $(".nav-section .icon-box-container .icon-box.menu-icon .open").click(
+    function (e) {
+      e.preventDefault();
+      $(".nav-section .mobile-menu").fadeIn();
+      $(this).hide();
+      $(this).siblings(".close").show();
+    }
+  );
+  $(".nav-section .icon-box-container .icon-box.menu-icon .close").click(
+    function (e) {
+      e.preventDefault();
+      $(".nav-section .mobile-menu").fadeOut();
+      $(this).siblings(".open").show();
+      $(this).hide();
+    }
+  );
 });

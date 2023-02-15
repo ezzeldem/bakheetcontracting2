@@ -31,6 +31,7 @@
         }
         .intro-slider-content {
           .title {
+            font-weight: 800;
             font-size: 53px;
             line-height: 60px;
             color: rgba($color-white, 1);
@@ -103,6 +104,31 @@
     .swiper-button-prev {
       top: 38%;
       right: 80px;
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .intro-section {
+    .intro-slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          .intro-slider-content {
+            .title {
+              font-size: 40px;
+            }
+            .prag {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      display: none;
+    }
+    .arrow-box {
+      top: 89%;
     }
   }
 }
