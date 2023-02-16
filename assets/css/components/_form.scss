@@ -1,0 +1,22 @@
+.form-group {
+  padding: 0 0 20px;
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-black;
+    margin-bottom: 12px;
+    display: block;
+    width: fit-content;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid rgba($color-gray, 0.2);
+    border-radius: 4px;
+    &:focus {
+      outline: transparent;
+      box-shadow: unset;
+      border-color: rgba($color-primary, 1);
+    }
+  }
+}

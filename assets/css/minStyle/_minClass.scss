@@ -5,3 +5,20 @@
   z-index: 99;
   display: none;
 }
+
+.section-padding {
+  padding: 40px 0;
+}
+.section-margin {
+  margin: 40px 0;
+}
+
+.container-width {
+  max-width: 660px;
+  @include dir(rtl) {
+    margin-right: auto;
+  }
+  @include dir(ltr) {
+    margin-left: auto;
+  }
+}
