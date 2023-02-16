@@ -237,6 +237,13 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   }
 }
 @media (max-width: 772px) {
+  .nav-section .search-box form input {
+    width: 200px;
+    max-width: 200px;
+  }
+  .nav-section .search-box form button {
+    font-size: 10x;
+  }
   .nav-section .mobile-menu {
     position: fixed;
     background-color: #e3e5ea;
@@ -277,6 +284,11 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   }
   .nav-section .nav-box {
     display: none;
+  }
+  .nav-section .icon-box-container .icon-box,
+  .nav-section .icon-box-container .icon-box a {
+    font-size: 12px;
+    font-weight: 500;
   }
   .nav-section .icon-box-container .icon-box.menu-icon {
     display: block;
@@ -413,20 +425,6 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   right: 80px;
 }
 
-@media (max-width: 772px) {
-  .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .title {
-    font-size: 40px;
-  }
-  .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .prag {
-    font-size: 13px;
-  }
-  .intro-section .swiper-pagination {
-    display: none;
-  }
-  .intro-section .arrow-box {
-    top: 89%;
-  }
-}
 .about-section {
   padding: 0 0 40px;
 }
@@ -461,6 +459,8 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
 .constructions-section .constructions-box .constructions-title {
   color: #fff;
   font-size: 40px;
+  font-weight: 800;
+  text-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
 }
 .constructions-section .constructions-box .constructions-list li {
   padding-bottom: 30px;
@@ -612,6 +612,7 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
 .career-section .quote-box .quote-item {
   font-size: 30px;
   font-weight: 800;
+  display: block;
   color: black;
 }
 .career-section .quote-box .quote-item::before, .career-section .quote-box .quote-item::after {
@@ -637,6 +638,7 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   width: 100%;
   text-align: center;
   display: block;
+  font-size: 16px;
   padding: 20px;
   color: black;
   background-color: white;
@@ -646,6 +648,92 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   background-color: #5bc0f8;
 }
 
+.contact-section {
+  position: relative;
+  z-index: 1;
+}
+.contact-section::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  opacity: 0.1;
+  width: 40%;
+  background-position: center;
+  background-image: url("../img/contactPattern.png");
+}
+html[dir=ltr] .contact-section::after {
+  right: 0;
+}
+html[dir=rtl] .contact-section::after {
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 40px 0;
+  }
+  .about-section .link-box {
+    padding-bottom: 20px;
+  }
+  .about-section .link-box a {
+    margin: 0 auto;
+  }
+  .about-section .img-box {
+    height: 300px;
+    margin: 20px 0;
+  }
+  .constructions-section .constructions-box .constructions-title {
+    font-size: 26px;
+  }
+  .constructions-section .constructions-box .constructions-list li a {
+    font-size: 13px;
+  }
+  .constructions-section .constructions-box.full-box .constructions-box-content {
+    width: 100%;
+    padding: 20px;
+  }
+  .career-section .quote-box .quote-item {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 22px;
+  }
+  .career-section .career-box {
+    margin: 0;
+  }
+  .career-section .career-box ul li a {
+    padding: 20px 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 772px) {
+  .intro-section .intro-slider {
+    height: 55vh;
+  }
+  .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .title {
+    font-size: 40px;
+  }
+  .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .prag {
+    font-size: 13px;
+  }
+  .intro-section .swiper-pagination {
+    display: none;
+  }
+  .intro-section .arrow-box {
+    top: 80%;
+  }
+  .our-project-section .projects-slider-box .swiper-slide {
+    height: 300px;
+  }
+  .materials-section .materials-box .materials-number {
+    font-size: 30px;
+  }
+  .career-section .career-box ul {
+    display: block;
+  }
+}
 .section-title-box.white-title .section-title,
 .section-title-box.white-title .sub-section-title {
   color: #fff;
@@ -671,6 +759,25 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
   color: #666;
 }
 
+@media (max-width: 992px) {
+  .section-title-box {
+    text-align: center;
+  }
+  .section-title-box .sub-section-title {
+    font-size: 12px;
+  }
+  .section-title-box .section-title {
+    font-size: 30px;
+  }
+  .prag {
+    font-size: 15px;
+  }
+}
+@media (max-width: 772px) {
+  .section-title-box .section-title {
+    font-size: 22px;
+  }
+}
 .link-box.full-box a,
 .link-box.full-box button {
   background-color: #5bc0f8;

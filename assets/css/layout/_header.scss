@@ -201,6 +201,17 @@
 
 @media (max-width: 772px) {
   .nav-section {
+    .search-box {
+      form {
+        input {
+          width: 200px;
+          max-width: 200px;
+        }
+        button {
+          font-size: 10x;
+        }
+      }
+    }
     .mobile-menu {
       position: fixed;
       background-color: #e3e5ea;
@@ -247,6 +258,11 @@
     }
     .icon-box-container {
       .icon-box {
+        &,
+        a {
+          font-size: 12px;
+          font-weight: 500;
+        }
         &.menu-icon {
           display: block;
           .open {

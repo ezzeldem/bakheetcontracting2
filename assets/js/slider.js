@@ -32,9 +32,16 @@ $(document).ready(function () {
 
   var swiper2 = new Swiper(".projects-slider", {
     grabCursor: true,
-    slidesPerView: 2,
     loop: true,
     effect: "creative",
+    slidesPerView: 1,
+    spaceBetween: 0,
+    breakpoints: {
+      772: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
     creativeEffect: {
       prev: {
         shadow: true,

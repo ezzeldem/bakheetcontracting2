@@ -26,3 +26,27 @@
   font-weight: 500;
   color: $color-gray;
 }
+
+@media (max-width: 992px) {
+  .section-title-box {
+    text-align: center;
+    .sub-section-title {
+      font-size: 12px;
+    }
+    .section-title {
+      font-size: 30px;
+    }
+  }
+
+  .prag {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 772px) {
+  .section-title-box {
+    .section-title {
+      font-size: 22px;
+    }
+  }
+}
