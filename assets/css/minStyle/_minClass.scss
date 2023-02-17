@@ -21,6 +21,11 @@
   @include dir(ltr) {
     margin-left: auto;
   }
+  @media (max-width: 992px) {
+    & {
+      max-width: 100%;
+    }
+  }
 }
 
 .over-flow-hidden {

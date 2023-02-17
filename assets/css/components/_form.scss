@@ -11,10 +11,14 @@
   input,
   textarea {
     width: 100%;
-    border: 1px solid rgba($color-gray, 0.2);
+    border: 0;
+    border-bottom: 1px solid rgba($color-white, 1);
     border-radius: 4px;
+    background-color: rgba($color-white, 0.1);
+
     &:focus {
       outline: transparent;
+      background-color: rgba($color-white, 0.15);
       box-shadow: unset;
       border-color: rgba($color-primary, 1);
     }

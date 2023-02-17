@@ -25,6 +25,11 @@ html[dir=rtl] .container-width {
 html[dir=ltr] .container-width {
   margin-left: auto;
 }
+@media (max-width: 992px) {
+  .container-width {
+    max-width: 100%;
+  }
+}
 
 .over-flow-hidden {
   overflow-y: hidden;
@@ -372,6 +377,21 @@ html[dir=ltr] .nav-section .search-box form button i {
 .intro-section .intro-slider .swiper-wrapper .swiper-slide .slide-bgimg img {
   display: none;
 }
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .slider-video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.intro-section .intro-slider .swiper-wrapper .swiper-slide .slider-video video {
+  width: 100%;
+}
 .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .title {
   font-weight: 800;
   font-size: 53px;
@@ -536,6 +556,30 @@ html[dir=ltr] .nav-section .search-box form button i {
   background-color: rgba(0, 129, 201, 0.6);
 }
 
+.our-project-section .projects-swiper-button-box {
+  display: flex;
+  align-items: center;
+}
+.our-project-section .projects-swiper-button-box .projects-swiper-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(0, 129, 201, 0.6);
+}
+html[dir=rtl] .our-project-section .projects-swiper-button-box .projects-swiper-button {
+  margin-left: 12px;
+}
+html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-button {
+  margin-right: 12px;
+}
+.our-project-section .projects-swiper-button-box .projects-swiper-button:hover {
+  background-color: #0081c9;
+}
 .our-project-section .projects-slider-box .swiper-slide {
   height: 550px;
   background-position: center;
@@ -672,24 +716,37 @@ html[dir=ltr] .nav-section .search-box form button i {
 .contact-section {
   position: relative;
   z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.contact-section::after {
-  z-index: -1;
+.contact-section:after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  background-size: contain;
-  opacity: 0.1;
-  width: 40%;
-  background-position: center;
-  background-image: url("../img/contactPattern.png");
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
-html[dir=ltr] .contact-section::after {
-  right: 0;
+.contact-section .form-group label {
+  color: white;
 }
-html[dir=rtl] .contact-section::after {
-  left: 0;
+.contact-section .contact-us-list-box ul li {
+  margin: 0 0 20px;
+}
+.contact-section .contact-us-list-box ul li .title {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin: 0 0 4px;
+  color: white;
+}
+.contact-section .contact-us-list-box ul li .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.contact-section .contact-us-list-box ul li .text:is(a):hover {
+  color: #5bc0f8;
 }
 
 @media (max-width: 992px) {
@@ -727,6 +784,28 @@ html[dir=rtl] .contact-section::after {
   .career-section .career-box ul li a {
     padding: 20px 12px;
     font-size: 14px;
+  }
+  .our-project-section .projects-swiper-button-box {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .our-project-section .projects-swiper-button-box .projects-swiper-button {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-section .contact-us-list-box ul li {
+    text-align: center;
+  }
+  .contact-section .socile-list-box {
+    padding: 0 0 30px;
+  }
+  .contact-section .socile-list-box .socile-list {
+    justify-content: center;
+  }
+  .contact-section .socile-list-box .socile-list li a {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
   }
 }
 @media (max-width: 772px) {
@@ -768,6 +847,7 @@ html[dir=rtl] .contact-section::after {
   font-weight: bold;
 }
 .section-title-box .section-title {
+  letter-spacing: 2px;
   font-size: 42px;
   font-weight: 900;
   color: #0081c9;
@@ -866,21 +946,49 @@ html[dir=rtl] .link-box button i {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  border: 1px solid rgba(102, 102, 102, 0.2);
+  border: 0;
+  border-bottom: 1px solid white;
   border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .form-group input:focus,
 .form-group textarea:focus {
   outline: transparent;
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: unset;
   border-color: #5bc0f8;
 }
 
-.copyRight-footer .copyRight-footer-h a {
+.socile-list-box .socile-list {
+  display: flex;
+  align-items: center;
+}
+html[dir=ltr] .socile-list-box .socile-list li {
+  padding-right: 12px;
+}
+html[dir=rtl] .socile-list-box .socile-list li {
+  padding-left: 12px;
+}
+.socile-list-box .socile-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #5bc0f8;
+}
+.socile-list-box .socile-list li a:hover {
+  color: #5bc0f8;
+  background-color: #fff;
+}
+
+.copyRight-footer .copyRight-footer-h a, .our-project-section .projects-swiper-button-box .projects-swiper-button {
   transition: 0.4s all ease-in-out;
 }
 
-.nav-section, .career-section .career-box ul li a, .link-box a,
-.link-box button {
+.nav-section, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .link-box a,
+.link-box button, .socile-list-box .socile-list li a {
   transition: 0.2s all ease-in-out;
 }

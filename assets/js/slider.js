@@ -30,7 +30,7 @@ $(document).ready(function () {
     },
   });
 
-  var swiper2 = new Swiper(".projects-slider", {
+  new Swiper(".projects-slider", {
     grabCursor: true,
     loop: true,
     effect: "creative",
@@ -51,6 +51,10 @@ $(document).ready(function () {
         shadow: true,
         translate: ["120%", 0, -500],
       },
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next",
+      prevEl: ".projects-swiper-button-prev",
     },
   });
 });
