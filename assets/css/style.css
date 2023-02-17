@@ -812,6 +812,11 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   .intro-section .intro-slider {
     height: 55vh;
   }
+  .intro-section .intro-slider .swiper-wrapper .swiper-slide .slider-video video {
+    position: absolute;
+    width: unset;
+    height: unset;
+  }
   .intro-section .intro-slider .swiper-wrapper .swiper-slide .intro-slider-content .title {
     font-size: 40px;
   }
