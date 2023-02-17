@@ -93,14 +93,25 @@
     align-items: center;
     justify-content: flex-end;
     .icon-box {
+      align-items: center;
       text-align: end;
       display: flex;
       cursor: pointer;
       @include dir(ltr) {
         border-left: 1px solid $color-gray;
+        i {
+          padding: {
+            right: 10px;
+          }
+        }
       }
       @include dir(rtl) {
         border-right: 1px solid $color-gray;
+        i {
+          padding: {
+            left: 10px;
+          }
+        }
       }
       padding: 0 14px;
       &:first-of-type {
@@ -150,6 +161,20 @@
         padding: 12px 18px;
         color: rgba($color-white, 1);
         background-color: rgba($color-primary-dark, 1);
+        @include dir(rtl) {
+          i {
+            padding: {
+              left: 10px;
+            }
+          }
+        }
+        @include dir(ltr) {
+          i {
+            padding: {
+              right: 10px;
+            }
+          }
+        }
       }
     }
   }
@@ -208,7 +233,8 @@
           max-width: 200px;
         }
         button {
-          font-size: 10x;
+          font-size: 12px;
+          padding: 16px 18px;
         }
       }
     }
