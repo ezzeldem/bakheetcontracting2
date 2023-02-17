@@ -26,6 +26,10 @@ html[dir=ltr] .container-width {
   margin-left: auto;
 }
 
+.over-flow-hidden {
+  overflow-y: hidden;
+}
+
 p,
 ul,
 h1,
@@ -249,9 +253,12 @@ html[dir=rtl] .nav-section .icon-box-container .icon-box {
     background-color: #e3e5ea;
     left: 0;
     right: 0;
-    top: 103px;
+    top: 150px;
     height: 100%;
     padding: 60px;
+  }
+  .nav-section .mobile-menu > ul {
+    overflow-y: auto;
   }
   .nav-section .mobile-menu > ul > li {
     padding: 0 0 20px;
@@ -812,6 +819,7 @@ html[dir=rtl] .contact-section::after {
   padding: 12px 30px;
   border: solid 1px #5bc0f8;
   position: relative;
+  background-color: transparent;
   z-index: 1;
 }
 html[dir=ltr] .link-box a i,

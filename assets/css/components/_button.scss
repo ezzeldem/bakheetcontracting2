@@ -34,6 +34,7 @@
     padding: 12px 30px;
     border: solid 1px $color-primary;
     position: relative;
+    background-color: transparent;
     @extend%trans2;
     z-index: 1;
     i {

@@ -31,6 +31,7 @@ $(document).ready(function () {
       $(".nav-section .mobile-menu").fadeIn();
       $(this).hide();
       $(this).siblings(".close").show();
+      $("body").addClass("overflow-hidden");
     }
   );
   $(".nav-section .icon-box-container .icon-box.menu-icon .close").click(
@@ -39,6 +40,7 @@ $(document).ready(function () {
       $(".nav-section .mobile-menu").fadeOut();
       $(this).siblings(".open").show();
       $(this).hide();
+      $("body").removeClass("overflow-hidden");
     }
   );
 });

@@ -217,10 +217,11 @@
       background-color: #e3e5ea;
       left: 0;
       right: 0;
-      top: 103px;
+      top: 150px;
       height: 100%;
       padding: 60px;
       & > ul {
+        overflow-y: auto;
         & > li {
           padding: 0 0 20px;
           margin: 0 0 20px;
