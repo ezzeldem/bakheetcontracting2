@@ -35,11 +35,11 @@ html[dir=ltr] .container-width {
   overflow-y: hidden;
 }
 
-.section-pattern, .our-project-section, .about-section {
+.section-pattern, .career-section, .our-project-section, .about-section {
   position: relative;
   z-index: 1;
 }
-.section-pattern::after, .our-project-section::after, .about-section::after {
+.section-pattern::after, .career-section::after, .our-project-section::after, .about-section::after {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;

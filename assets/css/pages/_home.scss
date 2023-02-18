@@ -325,6 +325,7 @@
 }
 
 .career-section {
+  @extend.section-pattern;
   .career-img {
     position: relative;
     text-align: center;
