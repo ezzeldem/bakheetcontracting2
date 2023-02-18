@@ -125,6 +125,18 @@
 
 .about-section {
   padding: 0 0 40px;
+  position: relative;
+  z-index: 1;
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    background-image: url("../img/aboutPattern.png");
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
   .img-box {
     height: 500px;
     width: 100%;
